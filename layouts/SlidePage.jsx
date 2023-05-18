@@ -162,20 +162,34 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-family: var(--heading-font-family);
     font-weight: var(--heading-font-weight);
-    font-size: 200%;
-
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
   }
 
   h2 {
     font-family: var(--heading-font-family);
     font-weight: var(--heading-font-weight);
-    font-size: 120%;
+    font-size: 1.6rem;
+  }
 
-    margin-bottom: 0.5rem;
+  h3 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-family: var(--heading-font-family);
+    font-weight: var(--heading-font-weight);
+    font-size: 1rem;
   }
 
   p {
+    font-size: 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
@@ -211,6 +225,15 @@ const GlobalStyle = createGlobalStyle`
   header span {
     color: var(--text);
   }
+
+  tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px;
+  }
+
+  td {
+  }
 `;
 
 export default function SlidePage({ children, next }) {
@@ -226,7 +249,7 @@ export default function SlidePage({ children, next }) {
   const totalPages = useTotalPages();
   const { mode, setMode } = useMode();
 
-  const NEXT = [13, 32, 39];
+  const NEXT = [39];
   const PREV = 37;
   const PRESENTER = 80;
   let slideCount = 0;

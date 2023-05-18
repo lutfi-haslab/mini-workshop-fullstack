@@ -7,8 +7,10 @@ const StyledSlide = styled.div`
 
 export default function Slide({ children, id, className }) {
   return (
-    <StyledSlide id={id} className={`${className} overflow-y-auto h-full flex flex-col justify-center items-center mt-10`}>
+    <StyledSlide id={id} className={`${className} overflow-y-auto h-screen grid mt-20`}>
+      <div className='flex flex-col justify-center items-center'>
       {children}
+      </div>
     </StyledSlide>
   )
 }
